@@ -1,9 +1,9 @@
 module Kss
-  class ApplicationController < ::ApplicationController
+  class ApplicationController < ActionController::Base
     layout 'kss/application'
-    
+
     private
-    
+
     def styleguide
       @styleguide ||= Kss::Parser.new(File.expand_path('app/assets/stylesheets', Rails.root))
     end
